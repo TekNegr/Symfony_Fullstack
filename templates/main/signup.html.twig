@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LEARNING PLATFORM{% endblock %}
+
+{% block body %}
+{#turn this into a signup page#}
+<div class ="flex h-screen items-center justify-center">
+    <form class="w-1/2" id="signup-form">
+
+    <div class="mb-3">
+      <label for="signup-email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="mb-3 flex w-full justify-center items-center">
+        <div class="mx-10"> 
+            <label for="signup-firstname" class="form-label">Prenom</label>
+            <input type="text" class="form-control" id="signup-firstname">
+        </div>
+        <div class="mx-10">
+            <label for="signup-name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="signup-name">
+        </div>
+        <div class="dropdown">
+            <button id="Role_Menu" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Role
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="Role_Menu">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="signup-password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="signup-password">
+    </div>
+
+    <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password">
+    </div>
+
+    <div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{path('login_page')}}" >Already have an account?</a>
+    </div>
+
+  </form>
+</div>
+{% endblock %}

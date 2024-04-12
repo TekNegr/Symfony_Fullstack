@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LEARNING PLATFORM{% endblock %}
+
+{% block body %}
+
+<div class ="flex h-screen items-center justify-center">
+    <form class="w-1/2" id="login-form">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="login-password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="login-password">
+    </div>
+    <div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{path('signup_page')}}" >Don't have an account?</a>
+    </div>
+
+  </form>
+</div>
+{% endblock %}
